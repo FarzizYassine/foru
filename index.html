@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>DC </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="shortcut icon" type="image/x-icon" href= "logotm.png">
+    </head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Square Peg', cursive;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        #intro {
+		min-height: 100vh;
+		background-color: #56c596;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+        margin: 0;
+        position: fixed;
+	}
+    .introtext{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+    }
+    .time {
+		 width: 200px;
+		 height: 200px;
+         margin: 0 auto;
+		 background-color: white;
+		 border-radius: 5% 5% 0 0;
+		 animation: up 1s 2s linear forwards;
+         visibility: hidden;
+	}
+    .C {
+		color: white;
+		font-size: 150px;
+		visibility: hidden;
+		animation: down 1s  1s  linear forwards;
+	}
+	.P{
+		font-size: 80px;
+		color: #205072;
+		visibility: hidden;
+		animation: up 1s  1s  linear forwards;
+	}
+	@keyframes up{
+		0%{
+			visibility: visible;
+			transform: translateY(50px);
+		}
+		100%{
+			visibility: visible;
+			transform: translateY(0px);
+		}
+	}
+	@keyframes down{
+		0%{
+			visibility: visible;
+			transform: translateY(-50px);
+		}
+		100%{
+			visibility: visible;
+			transform: translateY(0px);
+		}
+	}
+    .introtext h2{
+        font-size: 25px;
+        color: #3e6988;
+    }
+    .down {
+       animation: check 1s linear infinite;
+       color: #3e6988;
+    }
+    @keyframes check{
+		0%{
+			transform: translateY(-10px);
+		}
+		100%{
+			
+			transform: translateY(10px);
+		}
+	}
+        input[type="number"],[type="age"]{
+            height: 50px;
+            width: 300px;
+            border: #56c596 solid 1px;
+            border-radius: 15px;
+            outline: none;
+            text-align: center;
+            font-size: 15px;
+        }
+        input[type="radio"]{
+            -webkit-appearance: none;
+        }
+        input[type="radio"]:checked + label{
+            background-color: #56c596;
+            color: white;
+            transition-duration: 1s;
+        }
+        input[type="radio"]:checked + label i{
+            color: white;
+            transition-duration: 1s;
+        }
+        input[type="radio"]:hover + label{
+            background-color: #56c596;
+            color: white;
+            transition-duration: 1s;
+        }
+        input[type="radio"]:hover + label i{
+            color: white;
+            transition-duration: 1s;
+        }
+        #output{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @keyframes apper {
+            0%{
+                visibility: visible;
+                height: 0;
+            }
+            100%{
+                visibility: visible;
+                height: 100%;
+            }
+        }
+        span{
+          color: #56c596;
+          font-size: 40px;
+        }
+        #poid{
+            min-height: 100vh;
+            width: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            animation: up 1s  0.3s linear forwards;
+        }
+        #age{
+            min-height: 100vh;
+            width: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            animation: up 1s  0.3s linear forwards;
+        }
+        #taille{
+            min-height: 100vh;
+            width: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            animation: up 1s  0.3s linear forwards;
+        }
+        button{
+            margin-top: 25px;
+            background-color: #56c596;
+            color: white;
+            font-size: 35px;
+            border: 1px solid #56c596;
+            border-radius: 15px;
+            padding: 30px;
+            width: auto;
+        }
+        #gender{
+            min-height: 100vh;
+            width: 100%;
+            
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            visibility: hidden;
+            animation: up 1s  0.3s linear forwards;
+        }
+        
+        ::-webkit-scrollbar {
+          display: none;
+          }
+	::-webkit-scrollbar-thumb {
+		background-color: #31ddb2;
+		border-radius: 15%;
+	}
+	::-webkit-scrollbar-track {
+		background-color: #94f3db;
+	}
+    .gender{
+        height: 150px;
+        width: 300px;
+        border: 1px solid #56c596;
+        display: flex;
+        font-size: 25px;
+        color: #56c596;
+        flex-direction: column;
+        border-radius: 15px;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+    .gender i{
+        color: #31ddb2;
+    }
+    #output{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        width: 100%;
+        font-size: 80px;
+        visibility: hidden;
+         animation: up 1s  0.3s linear forwards;
+    }
+        @media only screen and (max-width : 500px){
+            .C{
+                font-size: 75px;
+            }
+            .P{
+                font-size: 40px;
+            }
+            .introtext{
+                justify-content: space-around;
+                text-align: center;
+                margin-top: 250px;
+                position: relative;
+            }
+            #output{
+                font-size: 40px;
+            }
+        }
+    </style>
+    <body>
+        <div id="intro"> 
+            <div class="introtext">
+            <h1 class="C">C'est le temps !</h1>
+            <h1 class="P"> Pour calculer votre dc</h1>
+            <h2>Clicker ici pour commencer </h2><br>
+            <i class="fa-solid fa-chevron-down down"></i>
+            </div>
+                <a href="#gender" class="time" id="first" ><img src="logotm.png" class="time" ></a>
+        </div>
+        <div id="gender">
+                <h1 style="color: #56c596; font-size: 30px;">Vous etes ?</h1>
+                <input type="radio" value="female" name="gender" id="female">
+                <label for="female" class="gender" >
+                    <h1>Femme</h1>
+                    <i class="fa-solid fa-person-dress"></i>
+                </label>
+                <input type="radio" value="male" name="gender" id="male">
+                <label for="male" class="gender">
+                    <h1>Homme</h1>
+                    <i class="fa-sharp fa-solid fa-person"></i>
+                </label>
+                <a href="#taille"><button class="next" id="gender-btn">Suivant</button></a>
+             </div>
+             <div id="taille">
+                <span for="taille"> Votre Taille:</span>
+                <input type="number" id="lataille">
+                <a href="#age"><button class="next" id="taille-btn">Suivant</button></a>
+                </div>
+                <div id="age">
+                    <span for="taille"> Votre age:</span>
+                     <input type="number" id="lage">
+                     <a href="#poid"><button class="next" id="age-btn">Suivant</button></a>
+                </div>
+                <div id="poid">
+                    <span for="taille"> Votre poids:</span>
+                <input type="number" id="lepoids">
+                <button onclick="dc()">Resultat</button>
+                </div>
+            <div id="output">
+             <p>Votre defficit calorique est <strong id="resultat"></strong>.</p>
+            <a href="#gender"><button class="next" id="re-btn">Recalucler</button></a>
+            </div>   
+       
+        <script>
+            let first=document.getElementById('first');
+            let gender=document.getElementById('gender');
+            let intro=document.getElementById('intro');
+            let taille=document.getElementById('taille');
+            let age=document.getElementById("age");
+            let poid=document.getElementById("poid");
+            let sortie=document.getElementById("output");
+            let genderbtn=document.getElementById('gender-btn');
+            let taillebtn=document.getElementById('taille-btn');
+            let rebtn=document.getElementById('re-btn');
+            let agebtn=document.getElementById('age-btn');
+            let poidbtn=document.getElementById('poid-btn');
+            first.onclick = function()
+              {
+                gender.style.display='flex'; 
+                intro.style.display='none';
+            }
+            
+            genderbtn.onclick = function()
+              {
+                gender.style.display="none";
+                taille.style.display='flex';    
+            }
+            taillebtn.onclick = function()
+              {
+                taille.style.display="none";
+                age.style.display='flex';    
+            }
+            agebtn.onclick = function()
+              {
+                age.style.display="none";
+                poid.style.display='flex';    
+            }
+            rebtn.onclick = function()
+              {
+                gender.style.display='flex'; 
+                sortie.style.display='none';
+            }
+            
+            function dc() {
+			let x=document.getElementById('male');
+			let y=document.getElementById('female');
+			var a = document.getElementById('lage').value;
+			var h = document.getElementById('lataille').value;
+			var w = document.getElementById('lepoids').value;
+			var r;
+			if(x.checked==true){
+				r=(10*w)+(6.25*h)-(5*a)+5;
+			}
+			else if(y.checked==true){
+			 r=(10*w)+(6.25*h)-(5*a)-161;
+			}
+			document.getElementById("resultat").innerHTML=r.toFixed(0)+"Kcal";
+            poid.style.display="none";
+             sortie.style.display='flex';
+		}
+        </script>
+    </body>
+</html>
